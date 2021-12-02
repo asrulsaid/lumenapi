@@ -1,5 +1,5 @@
-Project Feedback
-=======
+# Project Feedback
+
 # Lumen PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
@@ -24,4 +24,3 @@ If you discover a security vulnerability within Lumen, please send an e-mail to 
 ## License
 
 The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
->>>>>>> cb83cabc1f812d429b09db7d7a874c38556ee4a3
