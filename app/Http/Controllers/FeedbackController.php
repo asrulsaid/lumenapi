@@ -7,15 +7,15 @@ use App\Models\Feedback;
 
 class FeedbackController extends Controller
 {
-    public function getFeedbackAll(){
-        $data = Feedback::orderBy('created_at', 'desc')->get();
-        return response()->json(['status' => 'Success', 'data' => $data]);
-    }
-
-    public function sortFeedback(Request $request){
-        $sort = $request->input('sort');
-        $data = Feedback::orderBy('created_at', $sort)->get();
-        return response()->json(['status' => 'Success', 'data' => $data]);
+    public function getFeedbackAll(Request $request){
+        if ($request->has('sort')) {
+            $sortOrder = $request->input('sort');
+            $data = Feedback::orderBy('created_at', $sortOrder)->get();
+            return response()->json(['status' => 'Success', 'data' => $data]);
+        }
+     
+        $data = Feedback::all();
+        return response()->json(['status' => 'success', 'data' => $data]);
     }
 
     public function getFeedbackbyId($id){
@@ -38,24 +38,9 @@ class FeedbackController extends Controller
 
         return response()->json(['status' => 'Success', 'data' => 'Data deleted successfully']);
     }
-
-    public function searchUser($id_user){
-        $data = Feedback::where('id_user', $id_user)->get();
-        if (!$data){
-            return response()->json(['status' => 'Failed', 'data' => 'Data not found']);
-        }
-
-        return response()->json(['status' => 'Success', 'data' => $data]);
-    }
-
-    public function searchDate($date){
-        $data = Feedback::whereDate('created_at', $date)->get();
-
-        return response()->json(['status' => 'Success', 'data' => $data]);
-    }
-
+    
     public function search(Request $request){
-        $user = $request->input('user_id');
+        $user = $request->input('user');
         $date = $request->input('date');
 
         $data = Feedback::whereDate('created_at', $date)->orWhere('id_user', $user)->get();
