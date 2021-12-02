@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Project Feedback
 =======
 # Lumen PHP Framework
