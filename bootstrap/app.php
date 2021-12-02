@@ -23,7 +23,11 @@ $app = new Laravel\Lumen\Application(
     dirname(__DIR__)
 );
 
+<<<<<<< HEAD
 $app->withFacades();
+=======
+// $app->withFacades();
+>>>>>>> cb83cabc1f812d429b09db7d7a874c38556ee4a3
 
 $app->withEloquent();
 
@@ -72,6 +76,7 @@ $app->configure('app');
 |
 */
 
+<<<<<<< HEAD
 $app->middleware([
     // App\Http\Middleware\BasicMiddleware::class
 ]);
@@ -80,6 +85,15 @@ $app->routeMiddleware([
     'throttle' => App\Http\Middleware\ThrottleRequests::class,
     'cors'     => App\Http\Middleware\CorsMiddleware::class,
 ]);
+=======
+// $app->middleware([
+//     App\Http\Middleware\ExampleMiddleware::class
+// ]);
+
+// $app->routeMiddleware([
+//     'auth' => App\Http\Middleware\Authenticate::class,
+// ]);
+>>>>>>> cb83cabc1f812d429b09db7d7a874c38556ee4a3
 
 /*
 |--------------------------------------------------------------------------
@@ -91,7 +105,11 @@ $app->routeMiddleware([
 | totally optional, so you are not required to uncomment this line.
 |
 */
+<<<<<<< HEAD
 $app->register(App\Providers\CatchAllOptionsRequestsProvider::class);
+=======
+
+>>>>>>> cb83cabc1f812d429b09db7d7a874c38556ee4a3
 // $app->register(App\Providers\AppServiceProvider::class);
 // $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);

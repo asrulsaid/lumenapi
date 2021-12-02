@@ -6,6 +6,7 @@
     "type": "project",
     "require": {
         "php": "^7.3|^8.0",
+<<<<<<< HEAD
         "code-orange/lumen-geoip": "^3.0",
         "firebase/php-jwt": "^5.2",
         "guzzlehttp/guzzle": "^7.2",
@@ -16,6 +17,14 @@
         "fzaninotto/faker": "^1.9.1",
         "mockery/mockery": "^1.3.1",
         "phpunit/phpunit": "^9.3"
+=======
+        "laravel/lumen-framework": "^8.3.1"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.9.1",
+        "mockery/mockery": "^1.3.1",
+        "phpunit/phpunit": "^9.5.10"
+>>>>>>> cb83cabc1f812d429b09db7d7a874c38556ee4a3
     },
     "autoload": {
         "psr-4": {

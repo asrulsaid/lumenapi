@@ -18,6 +18,14 @@ $router->get('/', function () use ($router) {
 });
 
 $router->get('/feedbacks', 'FeedbackController@getFeedbackAll');
+<<<<<<< HEAD
 $router->get('/feedbacks/search', 'FeedbackController@search');
 $router->get('/feedbacks/{id}', 'FeedbackController@getFeedbackbyId');
 $router->delete('/feedbacks/{id}', 'FeedbackController@deleteFeedback');
+=======
+$router->get('/feedbacks/{id}', 'FeedbackController@getFeedbackbyId');
+$router->delete('/feedbacks/{id}', 'FeedbackController@deleteFeedback');
+$router->get('/feedbacks/users/{id_user}', 'FeedbackController@searchUser');
+$router->get('/feedbacks/date/{date}', 'FeedbackController@searchDate');
+$router->get('/feedbacks/search', 'FeedbackController@search');
+>>>>>>> cb83cabc1f812d429b09db7d7a874c38556ee4a3
